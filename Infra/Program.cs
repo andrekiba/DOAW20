@@ -70,7 +70,7 @@ namespace Infra
                 return new Dictionary<string, object?>
                 {
                     { "connectionString", storageAccount.PrimaryConnectionString },
-                    { "endpoint", Output.Format($"https://{app.DefaultHostname}/api/Hello?name=Pulumi") }
+                    { "endpoint", Output.Format($"https://{app.DefaultHostname}/api/HelloPulumi?name=Pulumi") }
                 };
             });
         }
