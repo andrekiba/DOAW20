@@ -23,7 +23,7 @@ namespace Infra
                     ResourceGroupName = resourceGroup.Name,
                     AccountReplicationType = "LRS",
                     AccountTier = "Standard",
-                    EnableHttpsTrafficOnly = true
+                    //EnableHttpsTrafficOnly = true
                 });
 
                 var appServicePlan = new Plan("doaw20-asp", new PlanArgs
@@ -70,7 +70,7 @@ namespace Infra
                 return new Dictionary<string, object?>
                 {
                     { "connectionString", storageAccount.PrimaryConnectionString },
-                    { "endpoint", Output.Format($"https://{app.DefaultHostname}/api/HelloPulumi?name=Pulumi") }
+                    { "endpoint", Output.Format($"https://{app.DefaultHostname}/api/HelloPulumi?name=DevOps@Work20") }
                 };
             });
         }
