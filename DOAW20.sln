@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{1CAC5447-266F-4BC3-B866-5AC75362B1D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Function\Infra\Infra.csproj", "{1CAC5447-266F-4BC3-B866-5AC75362B1D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Func", "Func\Func.csproj", "{0BF8F4DC-093F-4AF6-8932-87D407B5432F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloFunc", "Function\HelloFunc\HelloFunc.csproj", "{0BF8F4DC-093F-4AF6-8932-87D407B5432F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StaticWebsite", "StaticWebsite", "{A80731BE-BE30-466F-9B90-018D38C67200}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Function", "Function", "{EDD70D67-9505-4B09-9261-31F3B937F362}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "www", "www", "{D6CFC6CF-50CC-4509-A7DC-2C9B258E273E}"
+	ProjectSection(SolutionItems) = preProject
+		StaticWebsite\www\404.html = StaticWebsite\www\404.html
+		StaticWebsite\www\index.html = StaticWebsite\www\index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{C7F82783-AEB2-4B54-8755-25DF8FD45C59}"
+	ProjectSection(SolutionItems) = preProject
+		StaticWebsite\Infra\index.ts = StaticWebsite\Infra\index.ts
+		StaticWebsite\Infra\package.json = StaticWebsite\Infra\package.json
+		StaticWebsite\Infra\Pulumi.yaml = StaticWebsite\Infra\Pulumi.yaml
+		StaticWebsite\Infra\README.md = StaticWebsite\Infra\README.md
+		StaticWebsite\Infra\staticWebsite.ts = StaticWebsite\Infra\staticWebsite.ts
+		StaticWebsite\Infra\tsconfig.json = StaticWebsite\Infra\tsconfig.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +44,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1CAC5447-266F-4BC3-B866-5AC75362B1D9} = {EDD70D67-9505-4B09-9261-31F3B937F362}
+		{0BF8F4DC-093F-4AF6-8932-87D407B5432F} = {EDD70D67-9505-4B09-9261-31F3B937F362}
+		{D6CFC6CF-50CC-4509-A7DC-2C9B258E273E} = {A80731BE-BE30-466F-9B90-018D38C67200}
+		{C7F82783-AEB2-4B54-8755-25DF8FD45C59} = {A80731BE-BE30-466F-9B90-018D38C67200}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CFCB48CF-F698-4E78-BDC8-4589D07648B5}

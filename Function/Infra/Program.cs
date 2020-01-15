@@ -48,7 +48,7 @@ namespace Infra
 	                StorageAccountName = storageAccount.Name,
 	                StorageContainerName = container.Name,
 	                Type = "block",
-	                Content = new FileArchive("../Func/bin/Debug/netcoreapp3.1/publish")
+	                Content = new FileArchive("../HelloFunc/bin/Debug/netcoreapp3.1/publish")
                 });
 
                 var codeBlobUrl = SharedAccessSignature.SignedBlobReadUrl(blob, storageAccount);
